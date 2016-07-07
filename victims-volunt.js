@@ -65,7 +65,7 @@ function voluntInfo(voluntcount){
     person.fname = vName;
     person.street = vStreet;
     person.phone = vPhone
-
+    volunteers.push(person)
   }
 }
 
