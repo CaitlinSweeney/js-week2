@@ -1,5 +1,15 @@
 //Victims & Volunteers
 
+var victims = [];
+var volunteers = [];
+var names = [];
+var streets = [];
+var phones = [];
+var vName;
+var vStreet;
+var vPhone;
+var i;
+
 //Victims
 //This return a true or false for a numeric imput
 var victimAmt = prompt("How many victims do you wish to enter?");
@@ -10,19 +20,6 @@ function isVictim(victimAmt) {
     prompt("Please enter a valid numeric digit.");
   }
 }
-
-var victims = [];
-var volunteers = [];
-
-var names = [];
-var streets = [];
-var phones = [];
-
-var vName;
-var vStreet;
-var vPhone;
-var i;
-
 
 function victimInfo(victimcount){
   var person
@@ -40,7 +37,6 @@ function victimInfo(victimcount){
 }
 
 victimInfo(victimAmt);
-
 
 //Volunteers
 //This return a true or false for a numeric imput
@@ -70,3 +66,21 @@ function voluntInfo(voluntcount){
 }
 
 voluntInfo(voluntAmt);
+
+//Alert victim and volunteer amount, & name list.
+function list(array){
+  var result = "";
+  for (i=0; i < array.length; i++){
+    var item = array[i]
+    console.log(item.fname + " " + item.street + " " + item.phone);
+    result += item.fname + " " + item.street + " " + item.phone + "\n";
+  }
+  return result;
+}
+
+  alert(
+    victimAmt + ' ' + "people" + ' in need\n' +
+    list(victims) + ' ' +
+    voluntAmt + ' ' + "volunteers" + ' in need\n' +
+    list(volunteers) + ' '
+  );
