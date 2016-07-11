@@ -1,0 +1,122 @@
+// 1.
+function getName(obj){
+  for(var key in obj){
+    // Looping over the object
+    if (key == 'name'){
+      return obj[key]
+    }
+  }
+}
+
+getName({name: 'Jack' , age: '24'})
+
+// 2.
+function totalLetters(arr){
+  var str = arr.join("")
+  return str.length
+}
+
+// 3.
+
+function keyValue(argA, argB){
+  var kvPair = {};
+  kvPair[key] = value;
+}
+keyValue('city', 'Denver')
+
+// 4.
+
+function negativeIndex(array, number){
+  var x = array.length + number;
+  return array[x];
+}
+negativeIndex(['a', 'b', 'c', 'd', 'e'], -2) // should return 'd'
+negativeIndex(['jerry', 'sarah', 'sally'], -1) // should return 'sally'
+
+// 5.
+
+function removeM(string){
+  var newStr = string.split('')
+  var arr = []
+  for (i = 0; i < string.length; i++){
+    if (newStr[i] == 'M'){
+      newStr[i].replace('M', '')
+    }else if (newStr[i] == 'm'){
+      newStr[i].replace('m', '')
+    }else{
+      newStr.push(arr[i]);
+    }
+  }
+}
+removeM('family') should return 'faily'
+removeM('memory') should return 'eory'
+
+// 6.
+function printObject(object){
+  for (var key in object){
+  console.log(key + " is " + object[key])
+ }
+}
+
+// 7.
+
+function vowels(string){
+  var arr = string.split('')
+  var newArr = []
+  for (i=0; i < arr.length; i++){
+  if (arr[i] === 'a' || arr[i] === 'e' || arr[i] === 'i' || arr[i] === 'o' || arr[i] === 'u'){
+    newArr.push(arr[i])
+  }
+}
+  console.log(newArr)
+}
+vowels('What evil odd ducks!')
+//
+// vowels('alabama') should return ['a', 'a', 'a', 'a']
+
+// 8.
+
+function twins(array){
+  if (array.length % 2 != 0){
+    console.log(false);
+    return false;
+  }while(array.length > 0){
+    if(array[0] === array[1]){
+      array.shift();
+      array.shift();
+    }else{
+      console.log(false);
+      return false
+      break;
+    }
+  }
+    console.log(true);
+    return true;
+}
+twins(['a', 'a', 'b', 'b', 'c', 'c']) //should return true
+
+// 9.
+function or(arr){
+  if (arr.length === 0){
+    console.log(false);
+    return false;
+  }
+  while( arr.length > 0){
+    if (arr[0] === false){
+      arr.shift();
+    }else{
+      console.log(true);
+      return true;
+    }
+   }
+   console.log(false);
+   return false;
+ }
+or([false, false, true, false])
+
+// 10.
+
+ function unique(arr){
+   console.log(Array.from(new Set(arr)));
+   return arr.from(new Set(arr));
+ }
